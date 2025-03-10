@@ -62,3 +62,11 @@ img {
 	font-size: 100px;
 	margin: 50px;
 }
+
+.skill-tag {
+  background: #c9c7b7;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
