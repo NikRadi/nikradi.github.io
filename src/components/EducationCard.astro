@@ -1,0 +1,29 @@
+---
+const { date, location, title } = Astro.props;
+---
+
+<div class="card">
+  <h3>{title}</h3>
+  {location ? <h4>{location}</h4> : null}
+  {date ? <p>{date}</p> : null}
+  <slot />
+</div>
+
+<style>
+  .card {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+</style>

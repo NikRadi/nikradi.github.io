@@ -1,0 +1,63 @@
+---
+import CompanyCard from "./CompanyCard.astro"
+import Container from "./Container.astro"
+import JobDescription from "./JobDescription.astro"
+import Section from "./Section.astro"
+---
+
+<Section title="Career" id="career">
+  <Container>
+    <div class="career-container">
+
+      <CompanyCard company="Novataris" date="2022 - Present">
+        <JobDescription title="Senior Consultant" date="Jan 2023 - Present">
+          Besides developing full-stack solutions I have more responsibilities such as
+          managing projects and client relationship,
+          I have a bigger impact in architectural decisions and best practices and help
+          automate processes in the CI/CD.
+        </JobDescription>
+        <JobDescription title="Consultant" date="Jun 2022 - Dec 2023">
+          I develop full-stack solutions using technologies suck as Typescript, C#, Azure Devops, and MongoDB.
+        </JobDescription>
+      </CompanyCard>
+
+      <CompanyCard company="Technical University of Denmark" date="Feb 2020 - Jun 2021">
+        <JobDescription title="Teaching Assistant" date="Jun 2021 - Jun 2021">
+          I am a TA in the same course as last year.
+        </JobDescription>
+        <JobDescription title="Teaching Assistant" date="Jun 2020 - Jun 2020">
+          I am a TA in the 'Software Project' course, which lasts 3 weeks. I helped the students make
+          an Android app using Java and Android Studio.
+        </JobDescription>
+        <JobDescription title="Student Helper" date="Feb 2020 - Jun 2020">
+          I work on a machine learning project focused on NLP. Given a topic, the model is to read papers and
+          determine which are relevant to save the researchers time. The model was programmed in Python
+          and trained using Keras.
+        </JobDescription>
+      </CompanyCard>
+
+      <CompanyCard company="Siemens" date="Mar 2018 - Jan 2020">
+        <JobDescription title="Student Helper" date="Mar 2018 - Jan 2020">
+          I make tools to automate processes, typically with full-stack websites using Svelte and
+          Flask. Sometimes I make Excel formulas and write macros using VBA or a stand-alone Python
+          tool.
+        </JobDescription>
+      </CompanyCard>
+
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .career-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .title-list {
+    padding: 0;
+  }
+</style>

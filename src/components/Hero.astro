@@ -1,0 +1,32 @@
+---
+import Section from "./Section.astro"
+---
+
+<Section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Hello, I'm Nik Radi</h1>
+  </div>
+</Section>
+
+<style>
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+</style>

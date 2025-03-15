@@ -1,0 +1,61 @@
+---
+import Container from "./Container.astro"
+---
+
+<header>
+  <Container>
+    <nav>
+      <div>
+        <a class="social-icon" href="https://www.linkedin.com/in/nik-radi-66ba4b152/">
+          <img src="linkedin.png" alt="LinkedIn" width="50">
+        </a>
+        <a class="social-icon" href="https://github.com/nikradi">
+          <img src="github.svg" alt="GitHub" width="50">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </Container>
+</header>
+
+<style>
+  header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 2rem;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .social-icon {
+    margin: 0 10px;
+  }
+</style>

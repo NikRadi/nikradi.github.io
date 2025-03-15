@@ -1,0 +1,36 @@
+---
+const { company, date } = Astro.props;
+---
+
+<div class="company-card">
+  <div class="company-header">
+    <h3>{company}</h3>
+    <p>{date}</p>
+  </div>
+  <slot />
+</div>
+
+<style>
+  .company-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .company-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+  }
+
+  .company-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .company-header p {
+    opacity: 0.9;
+    font-size: 1rem;
+  }
+</style>

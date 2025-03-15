@@ -1,0 +1,42 @@
+---
+const { date, title } = Astro.props;
+---
+
+<div class="title">
+  <h4>{title}</h4>
+  <span class="date">{date}</span>
+  <p class="description">
+    <slot />
+  </p>
+</div>
+
+<style>
+  .title {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .title:last-child {
+    border-bottom: none;
+  }
+
+  .title h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+  }
+</style>

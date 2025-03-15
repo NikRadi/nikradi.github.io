@@ -1,0 +1,51 @@
+---
+import Container from "./Container.astro"
+import Section from "./Section.astro"
+import SkillCategory from "./SkillCategory.astro"
+import SkillTag from "./SkillTag.astro"
+---
+
+<Section title="Skills" id="skills">
+  <Container>
+    <div class="skills-container">
+
+      <SkillCategory title="Programming Languages">
+        <SkillTag>Assembly</SkillTag>
+        <SkillTag>C</SkillTag>
+        <SkillTag>C++</SkillTag>
+        <SkillTag>C#</SkillTag>
+        <SkillTag>JavaScript</SkillTag>
+        <SkillTag>TypeScript</SkillTag>
+        <SkillTag>Python</SkillTag>
+      </SkillCategory>
+
+      <SkillCategory title="Frameworks & Libraries">
+        <SkillTag>React</SkillTag>
+        <SkillTag>GraphQL</SkillTag>
+        <SkillTag>Jest</SkillTag>
+        <SkillTag>Node.js</SkillTag>
+        <SkillTag>Unity</SkillTag>
+      </SkillCategory>
+
+      <SkillCategory title="Tools & Technologies">
+        <SkillTag>Azure DevOps</SkillTag>
+        <SkillTag>CI/CD</SkillTag>
+        <SkillTag>Docker</SkillTag>
+        <SkillTag>Git</SkillTag>
+        <SkillTag>Linux</SkillTag>
+        <SkillTag>MongoDB</SkillTag>
+        <SkillTag>RESTful APIs</SkillTag>
+      </SkillCategory>
+
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+</style>

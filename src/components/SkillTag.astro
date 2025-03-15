@@ -1,0 +1,18 @@
+---
+const { label } = Astro.props;
+---
+
+<div class="tag">
+  <slot />
+</div>
+
+<style>
+  .tag {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import Container from "./Container.astro"
+import EducationCard from "./EducationCard.astro"
+import Section from "./Section.astro"
+---
+
+<Section title="Education" id="education">
+  <Container>
+    <div class="education-grid">
+      <EducationCard title="Professional Certifications">
+        <ul class="list">
+          <li>Microsoft: Azure Developer Associate</li>
+        </ul>
+      </EducationCard>
+
+      <EducationCard
+        title="Master of Science in Computer Science"
+        location="Technical University of Denmark (DTU)"
+        date="2019 - 2022"
+      >
+        <ul class="list">
+          <li>Specialized in AI and Algorithms</li>
+          <li>Thesis about Binary Reduction, an input reduction algorithm</li>
+        </ul>
+      </EducationCard>
+
+      <EducationCard
+        title="Bachelor of Science in Software Technology"
+        location="Technical University of Denmark (DTU)"
+        date="2016 - 2019"
+      >
+        <ul class="list">
+          <li>Thesis about multiple agents working together to gather resources and solving problems</li>
+        </ul>
+      </EducationCard>
+
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .list {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+</style>

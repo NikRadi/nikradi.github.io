@@ -1,0 +1,72 @@
+---
+import Container from "./Container.astro"
+import ProjectCard from "./ProjectCard.astro"
+import Section from "./Section.astro"
+---
+
+<Section title="Projects" id="projects">
+  <Container>
+    <div class="projects-grid">
+
+      <ProjectCard
+        title="Compiler"
+        tags={['C', 'Compiler', 'Assembly']}
+        url="https://github.com/NikRadi/minic"
+      >
+        I develop a C compiler written in C. It outputs assembly which is compiled to binaries
+        using the NASM assembler targeting X86_64.
+      </ProjectCard>
+
+      <ProjectCard
+        title="Chess Engine"
+        tags={['C++']}
+        url="https://github.com/NikRadi/skandar"
+      >
+        A chess engine written in C++. It uses hashing, bitboards, transposition tables, and Zoobrist Hashing.
+        <br />
+        Wins over my 1800 ELO dad.
+      </ProjectCard>
+
+      <ProjectCard
+        title="Operating System"
+        tags={['OS', 'Assembly', 'C']}
+        url="https://github.com/NikRadi/SomeOS"
+      >
+        A tiny operating system that does nothing but boot up and display some lines of text.
+      </ProjectCard>
+
+      <ProjectCard
+        title="Pacman"
+        tags={['Win32 API', 'C', 'GameDev', 'OpenGL']}
+        url="https://github.com/NikRadi/pacman-clone"
+      >
+        A Pacman game using only the Win32 API and OpenGL.
+      </ProjectCard>
+
+      <ProjectCard
+        title="Neural Net"
+        tags={['AI', 'Python']}
+        url="https://github.com/NikRadi/toy-nn-lib"
+      >
+        A multi-layered perceptron network that can learn the numbers in the MNIST dataset.
+      </ProjectCard>
+
+      <ProjectCard
+        title="Toy Language Interpreter"
+        tags={['Go', 'Interpreter', 'Virtual Machine']}
+        url="https://github.com/NikRadi/bananalang-go"
+      >
+        I wanted to learn Go, so I created a small language running in a VM.
+      </ProjectCard>
+
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+</style>
