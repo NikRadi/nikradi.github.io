@@ -69,4 +69,11 @@ import Section from "./Section.astro"
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
   }
+
+  @media (max-width: 768px) {
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 </style>
