@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets"
 import Container from "./Container.astro"
+import GithubImage from "../assets/github.svg"
+import LinkedInImage from "../assets/linkedin.png"
 ---
 
 <header>
@@ -7,10 +10,10 @@ import Container from "./Container.astro"
     <nav>
       <div>
         <a class="social-icon" href="https://www.linkedin.com/in/nik-radi-66ba4b152/">
-          <img src="linkedin.png" alt="LinkedIn" width="50">
+          <Image src={LinkedInImage} alt="LinkedIn" height="50" width="50" />
         </a>
         <a class="social-icon" href="https://github.com/nikradi">
-          <img src="github.svg" alt="GitHub" width="50">
+          <Image src={GithubImage} alt="Github" height="50" width="50" />
         </a>
       </div>
       <ul class="nav-links">
@@ -40,6 +43,10 @@ import Container from "./Container.astro"
     align-items: center;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .nav-links {
     display: flex;
     list-style: none;
@@ -51,7 +58,6 @@ import Container from "./Container.astro"
 
   .nav-links a {
     color: var(--white);
-    text-decoration: none;
     transition: color 0.3s;
   }
 
