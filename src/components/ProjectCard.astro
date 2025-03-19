@@ -1,8 +1,10 @@
 ---
 const { tags, title, url } = Astro.props;
+
+const linkAriaLabel = `Visit my ${title} project`;
 ---
 
-<a class="link" href={url} target="_blank" rel="noopener noreferrer">
+<a class="link" href={url} target="_blank" rel="noopener noreferrer" aria-label={linkAriaLabel}>
   <div class="card">
     <div class="info">
       <h3>{title}</h3>
